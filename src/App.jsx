@@ -14,6 +14,9 @@ import MyComponents9 from "./components/MyComponents9";
 import ColorPicker from "./components/ColorPicker";
 import MyComponents11 from "./components/MyComponents11";
 import UpdateObjects from "./components/UpdateObjects";
+import UpdateArrays from "./components/UpdateArrays";
+import UpdateArraysOfObj from "./components/UpdateArraysOfObj";
+import ToDoList from "./components/ToDoList";
 
 
 
@@ -175,9 +178,43 @@ function App() {
             info -> UpdateObjects.jsx
              */}
 
-             <UpdateObjects />
+            <UpdateObjects />
 
+            {/* ========================================================== */}
 
+            {/* Sub. 13
+            ------update ARRAYS
+
+            info -> UpdateArrays.jsx
+             */}
+
+            <UpdateArrays />
+
+            {/* ========================================================== */}
+
+            {/* Sub. 14
+            ------update ARRAYS of Objects
+
+            info -> UpdateArraysOfObj.jsx
+             */}
+
+            <UpdateArraysOfObj />
+
+            {/* ========================================================== */}
+
+            {/* Sub. 15
+            ------ToDoList projekt
+
+            info to-do-list -> ToDoList.jsx
+             */}
+
+            {/* ========================================================== */}
+
+            {/* Sub. 15
+            ------ToDoList projekt
+
+            info to-do-list -> ToDoList.jsx
+             */}
 
         </>
     );
