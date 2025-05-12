@@ -17,7 +17,9 @@ import UpdateObjects from "./components/UpdateObjects";
 import UpdateArrays from "./components/UpdateArrays";
 import UpdateArraysOfObj from "./components/UpdateArraysOfObj";
 import ToDoList from "./components/ToDoList";
-
+import MyComponents16 from "./components/MyComponents16";
+import MyComponents16_2 from "./components/MyComponents16_2"
+import ComponentA from "./components/ComponentA";
 
 
 function App() {
@@ -104,7 +106,7 @@ function App() {
             ------render lists
             
             Lista itemow generowanych na stronie najczesciej przy uzyciu .map key=value unique
-             */}
+            */}
 
             {fruits.length > 0 && <List items={fruits} category="Fruits"/>}
             {vegetables.length > 0 ? <List items={vegetables} category="Vegetables"/> : null}
@@ -116,7 +118,7 @@ function App() {
             
             Interakcja gdy user kliknie na dany element, mozemy sterowac tym co 
             sie stanie poprzez callbacki przy onClick event handler
-             */}
+            */}
 
             <Buttons7 />
             <ProfilePicture />
@@ -131,7 +133,7 @@ function App() {
 
             Hook reacta, który umozliwia tworzenie zmiennej ze stanem oraz funkcji ustawiajacej ktora aktualizuje jej wartosc w virtual DOM
             [name, setName]
-             */}
+            */}
             <MyComponent />
             <Counter />
 
@@ -143,7 +145,7 @@ function App() {
             obsluga eventow glownie przy formularzach
             <input>, <textare>, <select>
             uruchamia funkcje zawsze gdy wartosc tych pol ulega zmianie
-             */}
+            */}
 
             <MyComponents9 />
 
@@ -151,7 +153,7 @@ function App() {
 
             {/* Sub. 10
             ------projekt Color Picker
-             */}
+            */}
 
             <ColorPicker />
 
@@ -166,7 +168,7 @@ function App() {
             Umożliwia bezpiecznie aktualizacje na podstawie popraedniego stanu
             Uzywana przy wielu aktualizacjach stanu i funkcjach asynchronicznych
             Dobra praktyka jest uzywanie funkcji aktualizujacych(updater functions)
-             */}
+            */}
 
             <MyComponents11 />
 
@@ -176,7 +178,7 @@ function App() {
             ------update OBJECTS
 
             info -> UpdateObjects.jsx
-             */}
+            */}
 
             <UpdateObjects />
 
@@ -186,7 +188,7 @@ function App() {
             ------update ARRAYS
 
             info -> UpdateArrays.jsx
-             */}
+            */}
 
             <UpdateArrays />
 
@@ -196,7 +198,7 @@ function App() {
             ------update ARRAYS of Objects
 
             info -> UpdateArraysOfObj.jsx
-             */}
+            */}
 
             <UpdateArraysOfObj />
 
@@ -210,11 +212,62 @@ function App() {
 
             {/* ========================================================== */}
 
-            {/* Sub. 15
-            ------ToDoList projekt
+            {/* Sub. 16
+            ------useEffect()
 
-            info to-do-list -> ToDoList.jsx
-             */}
+            Hook reacta, który mowi zeby wykonał jakis kod kiedy:
+            -ten komponent zostanie ponownie wyrenderowany
+            -komponent sie zamontuje
+            -stan ulegnie zmianie
+
+            useEffect((function, [zależności]))
+            1.useEffect(() => {})             uruchamia sie po kazdym nowym renderze
+            2.useEffect(() => {}, [])         uruchamia sie tylko przy montowaniu
+            3.useEffect(() => {}, [wartości]) uruchamia sie przy montowaniu + gdy wartosc sie zmieni
+
+            Zastosowania:
+            -nasłuchwianie zdarzen(event listeners)
+            -manipulacja DOM
+            -subskrypcje, aktualizacje w czasie rzeczywistym
+            -fetching data api
+            -sprzatanie po odmontowaniu komponentu
+
+            */}
+
+            <MyComponents16 />
+            
+            <MyComponents16_2 />
+
+            {/* ========================================================== */}
+
+            {/* Sub. 17
+            ------Digital Clock
+
+            info digital-clock -> DigitalClock.jsx
+            */}
+
+            {/* ========================================================== */}
+
+            {/* Sub. 18
+            ------UseContext()
+
+            Hook reacta, ktory pozwala udostepniac wartosci miedzy wieloma poziomami
+            komponentow bez koniecznosci przekazywania propsow na kazdym poziomie
+            
+            KOMPONENT DOSTAWCY (PROVIDER COMPONENT)
+            1. import { createContext } from 'react';
+            2. export const MyContext = createContext();
+            3. <MyContext.Provider value={value}>
+                <Child />
+            </MyContext.Provider>
+
+            KOMPONENTY ODBIORCY (CONSUMER COMPONENTS)
+            1. import React, { useContext } from 'react';
+            2. import { MyContext } from './ComponentA';
+            3. const value = useContext(MyContext);
+            */}
+
+            <ComponentA />
 
         </>
     );
