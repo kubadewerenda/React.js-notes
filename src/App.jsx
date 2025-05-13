@@ -20,6 +20,7 @@ import ToDoList from "./components/ToDoList";
 import MyComponents16 from "./components/MyComponents16";
 import MyComponents16_2 from "./components/MyComponents16_2"
 import ComponentA from "./components/ComponentA";
+import MyComponents19 from "./components/My/components19";
 
 
 function App() {
@@ -59,7 +60,8 @@ function App() {
 
             1. external- w pliku css klasa -> index.css
             2. modules- osobny folder z komponentem i jego klasa css components -> Button -> Button.jsx
-            3. inline- w pliku komponentu -> const styles -> styles = */}
+            3. inline- w pliku komponentu -> const styles -> styles = 
+            */}
 
             <Button />
 
@@ -71,7 +73,8 @@ function App() {
             wlasciwosci tylko do odczytu miedzy komponentami, parent moze 
             wyslac dane do child 
 
-            <Component key=value/> */}
+            <Component key=value/> 
+            */}
 
             <Student name="Jakub D" age={21} isStudent={true}/>
             <Student name="Benek" age={19} isStudent={false}/>
@@ -80,13 +83,15 @@ function App() {
             mechanizm ktory upewnia czy przesłane 
             wartosci sa danego typu 
 
-            age: PropTypes.number -> Student.jsx */}
+            age: PropTypes.number -> Student.jsx 
+            */}
 
             {/* ------defaultProps 
             domyslne wartosci props gdyby nie 
             zostaly podane przez parent
 
-            name: "Guest" -> Student.jsx */}
+            name: "Guest" -> Student.jsx 
+            */}
 
             {/* <Student /> */}
 
@@ -96,7 +101,8 @@ function App() {
             ------conditional rendering
 
             pozwala kontrolowac co ma byc wyswietlane a co nie
-            dzieki warunkom (show,hide or change components) */}
+            dzieki warunkom (show,hide or change components) 
+            */}
 
             <UserGreeting isLoggedIn={true} username="JakubD"/>
 
@@ -134,6 +140,7 @@ function App() {
             Hook reacta, który umozliwia tworzenie zmiennej ze stanem oraz funkcji ustawiajacej ktora aktualizuje jej wartosc w virtual DOM
             [name, setName]
             */}
+
             <MyComponent />
             <Counter />
 
@@ -208,7 +215,7 @@ function App() {
             ------ToDoList projekt
 
             info to-do-list -> ToDoList.jsx
-             */}
+            */}
 
             {/* ========================================================== */}
 
@@ -269,6 +276,31 @@ function App() {
 
             <ComponentA />
 
+            {/* ========================================================== */}
+
+            {/* Sub. 19
+            ------UseRef()
+
+            useState() - ponownie renderuje element, gdy zmienia sie wartośc stanu
+
+            useRef() - "użycie referencji". Nie powoduje ponownego renderowania, gdy jego wartosc sie zmienia.
+                        gdy chcesz aby komponent zapamiętał dana informacje,
+                        ale nie chcesz aby ta informacja wywołała nowe renderowanie                   
+                        Zwraca obiekt z elementem current.
+            1.Dostep/interakcja z elementami DOM
+            2.Obsługa fokusu, animacji i przejsc
+            3.Zarządzanie timerami i interwałami            
+            */}
+
+            <MyComponents19 />
+
+            {/* ========================================================== */}
+
+            {/* Sub. 20
+            ------Stopwatch app
+
+            info stopwatch -> Stopwatch.jsx
+            */}
         </>
     );
 }
