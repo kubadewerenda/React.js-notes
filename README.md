@@ -31,10 +31,10 @@ Before running this project, make sure you have the following installed:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/react.js-notes.git
+git clone https://github.com/kubadewerenda/React.js-notes.git
 
 # Navigate to the project directory
-cd react.js-notes
+cd React.js-notes
 
 # Install dependencies
 npm install
@@ -42,6 +42,6 @@ npm install
 yarn install
 
 # Start the development server
-npm start
+npm run dev
 # or
-yarn start
+yarn run dev
